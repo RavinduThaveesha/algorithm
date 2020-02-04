@@ -1,7 +1,10 @@
 Find the first repeating element in an array of integers
+Given an array of integers, find the first repeating element in it. 
+We need to find the element that occurs more than once and whose index of first occurrence is smallest.
 
-
-Given an array of integers, find the first repeating element in it. We need to find the element that occurs more than once and whose index of first occurrence is smallest.
+Use Hashing to solve this in O(n) time on average. 
+The idea is to traverse the given array from right to left and 
+update the tmp array whenever we find new element and check temp array for duplication. 
 
 arr1 = [1,2,1,2,3,3];
 arr2 = [2,1,3,5,3,2];
