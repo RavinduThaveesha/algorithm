@@ -9,19 +9,19 @@ update the tmp array whenever we find new element and check temp array for dupli
 arr1 = [1,2,1,2,3,3];
 arr2 = [2,1,3,5,3,2];
 arr3 = [1,2,3,4,5,6];
-arr4 = [10, 5, 3, 4, 3, 5, 6];
+arr4 = [10,5,3,4,3,5,6];
 
 function checkDuplicate (array) {
-  let tmp = [];
+  let tmp = {};
   for (i = 0; i < array.length; i++) {
-    if (tmp.includes(array[i])) {
+    if (tmp[i]) {
       return array[i];
     } else {
-      tmp.push(i);
+      tmp[array[i]] = array[i];
     }
   }
   
   return -1;
 }
 
-console.log(checkDuplicate(arr1));
+console.log(checkDuplicate(arr2));
